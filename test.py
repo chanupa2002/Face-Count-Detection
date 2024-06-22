@@ -28,6 +28,8 @@ while True:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 255, 0), 2)
         n = n + 1
 
+    cv2.putText(frame, "Faces detected = " + str(n), (290, 64), cv2.FONT_HERSHEY_DUPLEX, 1, (0, 0, 255))
+
     cv2.imshow("Faces", frame)
 
     if cv2.waitKey(1) == ord("q"):
